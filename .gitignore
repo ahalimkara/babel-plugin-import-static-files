@@ -20,7 +20,7 @@ node_modules
 node_modules-*
 jspm_packages
 
-lib
+
 lib-cov
 coverage
 .nyc_output

@@ -11,7 +11,7 @@ function getHash(str) {
 }
 
 function getFile(state, absPath, opts) {
-  const root = state.file.opts.sourceRoot || process.cwd();
+  const root = (opts.replaceExtendDir ? `${state.file.opts.sourceRoot}${opts.replaceExtendDir}` : state.file.opts.sourceRoot) || process.cwd();
   let file = absPath.replace(root, '');
 
   if (opts.baseDir) {
